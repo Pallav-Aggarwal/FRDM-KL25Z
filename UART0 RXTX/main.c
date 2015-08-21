@@ -8,26 +8,17 @@
 #define GREEN_LED 				19
 #define BLUE_LED					1
 
+unsigned long Uart0Init(unsigned long baudRate, unsigned char parity, unsigned char stopBits);
+unsigned long SendByte(unsigned char txData);
+
 
 int main(void)
 {
 	unsigned long i=0;
 	//All system related settings
-	SystemCoreClockUpdate();//Set System MAIN Clock to 48Mhz
-	SIM->SCGC5 |= (1<<10);	//Enable Clock for PORTB
-	//SIM->SCGC5 |= (1<<12);	//Enable Clock for PORTD
+	SystemCoreClockUpdate();								//Set System MAIN Clock to 48Mhz
 	
-	// PORT CONTROL FOR ALTERNATE FUNCTIONS
-	PORTB->PCR[18] |= (1 << 8); // 0000 0001 0000 0000 // PORTB18 Pin set GPIO Function
-	//PORTB->PCR[19] |= (1 << 8); // 0000 0001 0000 0000 // PORTB19 Pin set GPIO Function
-	//PORTD->PCR[1] |= (1<<8); // 0000 0001 0000 0000 // PORTD1 Pin set GPIO Function
-	
-	PTB->PDDR |= (1 << 18); //Configure PTB18 pin as output
-	//PTB->PDDR |= (1 << 19); //Configure PTB19 pin as output
-  //PTD->PDDR |= (1<< 1); // Configure PTD1 pin as output
 
-
-	
 	while(1)
 	{
 		
@@ -44,6 +35,29 @@ int main(void)
 		
 	}
 	//return 0;
+}
+
+unsigned long Uart0Init(unsigned long baudRate, unsigned char parity, unsigned char stopBits)
+{
+	SIM->SOPT2 = SIM_SOPT2_UART0SRC(1); 		// UART0 CLOCK SOURCE - MCGFLLCLK clock or MCGPLLCLK/2
+	SIM->SOPT2 |= SIM_SOPT2_PLLFLLSEL_MASK; // PLL Divide by 2
+	SIM->SOPT2 |= SIM_SCGC4_UART0_MASK; 		// ENABLE UART0 CLOCK
+	SIM->SOPT2 |= SIM_SCGC5_PORTD_MASK; 		// ENABLE PORTD CLOCK (RX, TX Pins)
+	
+	// PORT CONTROL FOR ALTERNATE FUNCTIONS
+	PORTD->PCR[6] |=  PORT_PCR_ISF_MASK | PORT_PCR_MUX(3); //PTD6 - UART0_RX
+	PORTD->PCR[7] |=  PORT_PCR_ISF_MASK | PORT_PCR_MUX(3); //PTD7 - UART0_TX
+	
+	
+	
+	
+	return 0;
+}
+
+unsigned long SendByte(unsigned char txData)
+{
+	
+	return 0;
 }
 
 
