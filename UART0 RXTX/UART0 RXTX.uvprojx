@@ -417,6 +417,11 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>uart0.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\uart0.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
