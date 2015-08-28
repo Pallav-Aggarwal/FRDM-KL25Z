@@ -31,21 +31,27 @@ void Uart0Init(unsigned long baudRate, unsigned char parity, unsigned char stopB
 
 	//CONFIGURE BAUDRATE
 	UART0->BDH = 0x00;
-  UART0->BDL = 147;  //(24000000/((16+1)*(9600))) / Baud 9600
+  UART0->BDL = 76;  //(24000000/((16+1)*(9600))) / Baud 9600
 	
   UART0->C2 |= UART0_C2_TE_MASK | UART0_C2_RE_MASK;  		// TX & RX enable after UART0 configuration
 
 }
 
-unsigned long Uart0TxByte(unsigned char txData)
+void Uart0TxByte(unsigned char txData)
 {
 	//Wait till buffer if not empty or tx is still in progress
 	while(!(UART0->S1 & UART_S1_TDRE_MASK) && !(UART0->S1 & UART_S1_TC_MASK));  
 	UART0->D = txData;
-	return 0;
 }
 
-unsigned long Uart0RxByte(void)
+void Uart0TxString(char *txString, unsigned char stringLength)
 {
-	return 0;
+	while(*txString) Uart0TxByte(*txString++);
+
+}
+unsigned char Uart0RxPollByte(void)
+{
+	unsigned char rx=0;
+	if(UART0_S1_RDRF_MASK & UART0->S1) rx = UART0->D;
+	return rx;
 }

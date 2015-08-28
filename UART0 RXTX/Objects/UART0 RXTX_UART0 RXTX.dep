@@ -1,14 +1,14 @@
 Dependencies for Project 'UART0 RXTX', Target 'UART0 RXTX': (DO NOT MODIFY !)
-F (.\main.c)(0x55D76D1E)(-c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I "C:\Users\pallav.aggarwal\Documents\GitHub\FRDM-KL25Z\UART0 RXTX\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.6.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DMKL25Z128xxx4-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
-I (uart0.h)(0x55D76248)
+F (.\main.c)(0x55E05780)(-c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I "C:\Users\pallav.aggarwal\Documents\GitHub\FRDM-KL25Z\UART0 RXTX\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.6.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DMKL25Z128xxx4-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (uart0.h)(0x55E04D0B)
 I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.6.0\Device\Include\MKL25Z4.h)(0x5167C906)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cm0plus.h)(0x55095F2C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C268E0)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmInstr.h)(0x55095F2C)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmFunc.h)(0x55095F2C)
 I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.6.0\Device\Include\system_MKL25Z4.h)(0x5167C906)
-F (.\uart0.c)(0x55D76596)(-c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I "C:\Users\pallav.aggarwal\Documents\GitHub\FRDM-KL25Z\UART0 RXTX\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.6.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DMKL25Z128xxx4-o .\objects\uart0.o --omf_browse .\objects\uart0.crf --depend .\objects\uart0.d)
-I (uart0.h)(0x55D76248)
+F (.\uart0.c)(0x55E04D0B)(-c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I "C:\Users\pallav.aggarwal\Documents\GitHub\FRDM-KL25Z\UART0 RXTX\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.6.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DMKL25Z128xxx4-o .\objects\uart0.o --omf_browse .\objects\uart0.crf --depend .\objects\uart0.d)
+I (uart0.h)(0x55E04D0B)
 I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.6.0\Device\Include\MKL25Z4.h)(0x5167C906)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cm0plus.h)(0x55095F2C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C268E0)
@@ -16,7 +16,7 @@ I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmInstr.h)(0x55095F2C)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cmFunc.h)(0x55095F2C)
 I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.6.0\Device\Include\system_MKL25Z4.h)(0x5167C906)
 F (RTE\Device\MKL25Z128xxx4\startup_MKL25Z4.s)(0x5167C2AE)(--cpu Cortex-M0+ --pd "__EVAL SETA 1" -g --apcs=interwork -I "C:\Users\pallav.aggarwal\Documents\GitHub\FRDM-KL25Z\UART0 RXTX\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.6.0\Device\Include--pd "__UVISION_VERSION SETA 515" --pd "_RTE_ SETA 1" --pd "MKL25Z128xxx4 SETA 1"--list .\listings\startup_mkl25z4.lst --xref -o .\objects\startup_mkl25z4.o --depend .\objects\startup_mkl25z4.d)
-F (RTE\Device\MKL25Z128xxx4\system_MKL25Z4.c)(0x55D72189)(-c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I "C:\Users\pallav.aggarwal\Documents\GitHub\FRDM-KL25Z\UART0 RXTX\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.6.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DMKL25Z128xxx4-o .\objects\system_mkl25z4.o --omf_browse .\objects\system_mkl25z4.crf --depend .\objects\system_mkl25z4.d)
+F (RTE\Device\MKL25Z128xxx4\system_MKL25Z4.c)(0x55E03ACE)(-c --cpu Cortex-M0+ -D__EVAL -g -O0 --apcs=interwork --split_sections-I "C:\Users\pallav.aggarwal\Documents\GitHub\FRDM-KL25Z\UART0 RXTX\RTE"-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.6.0\Device\Include-D__UVISION_VERSION="515" -D_RTE_ -DMKL25Z128xxx4-o .\objects\system_mkl25z4.o --omf_browse .\objects\system_mkl25z4.crf --depend .\objects\system_mkl25z4.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x54C268E0)
 I (C:\Keil_v5\ARM\PACK\Keil\Kinetis_KLxx_DFP\1.6.0\Device\Include\MKL25Z4.h)(0x5167C906)
 I (C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.3.0\CMSIS\Include\core_cm0plus.h)(0x55095F2C)

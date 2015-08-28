@@ -14,5 +14,7 @@
 #define UART_BAUD_SBR					(UART_BAUD_CLOCK)/((16+1)*9600)
 
 void Uart0Init(unsigned long baudRate, unsigned char parity, unsigned char stopBits, unsigned char mode);
-unsigned long Uart0TxByte(unsigned char txData);
-unsigned long Uart0RxByte(void);
+void Uart0TxByte(unsigned char txData);
+void Uart0TxString(char *txString, unsigned char stringLength);
+unsigned char Uart0RxPollByte(void);
+
