@@ -417,6 +417,11 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
+            <File>
+              <FileName>UID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\UID.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
