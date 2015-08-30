@@ -434,7 +434,7 @@ Image Symbol Table
     SystemCoreClockUpdate                    0x00000411   Thumb Code   320  system_mkl25z4.o(i.SystemCoreClockUpdate)
     SystemInit                               0x0000056d   Thumb Code   168  system_mkl25z4.o(i.SystemInit)
     Uart0Init                                0x00000631   Thumb Code   182  uart0.o(i.Uart0Init)
-    main                                     0x000006f9   Thumb Code    56  main.o(i.main)
+    main                                     0x000006f9   Thumb Code    54  main.o(i.main)
     SystemCoreClock                          0x1ffff000   Data           4  system_mkl25z4.o(.data)
     __libspace_start                         0x1ffff004   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x1ffff064   Data           0  libspace.o(.bss)
@@ -548,13 +548,13 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       108         40          0          0          0       5415   main.o
+       108         42          0          0          0       5387   main.o
         68         38        192          0       1024        892   startup_mkl25z4.o
        572         66          0          4          0       1651   system_mkl25z4.o
        260         22          0          0          0       1646   uart0.o
 
     ----------------------------------------------------------------------
-      1008        166        256          4       1024       9604   Object Totals
+      1008        168        256          4       1024       9576   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          0          0         32          0          0          0   (incl. Padding)
 
@@ -604,9 +604,9 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1624        182        256          4       1124       9832   Grand Totals
-      1624        182        256          4       1124       9832   ELF Image Totals
-      1624        182        256          4          0          0   ROM Totals
+      1624        184        256          4       1124       9804   Grand Totals
+      1624        184        256          4       1124       9804   ELF Image Totals
+      1624        184        256          4          0          0   ROM Totals
 
 ==============================================================================
 

@@ -13,7 +13,7 @@ void delay(unsigned long cycles);
 
 int main(void)
 {
-	unsigned temp=0;
+	//unsigned temp=0;
 	//All system related settings
 	SystemCoreClockUpdate();								//Set System MAIN Clock to 48Mhz
 	Uart0Init(9600, UART_PARITY_NONE, UART_ONE_STOP_BIT, UART_MODE_8BIT);
@@ -21,7 +21,6 @@ int main(void)
 
 	while(1)
 	{
-		
 		//Uart0TxByte(134);
 		Uart0TxString("Ambient Temperature : 26.5 deg C\n", 0);
 		delay(DELAY_1M);
