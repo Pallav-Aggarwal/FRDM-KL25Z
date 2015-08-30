@@ -20,7 +20,7 @@ int main(void)
 	// PORT CONTROL FOR ALTERNATE FUNCTIONS
 	//PORTB->PCR[18] |= (1 << 8); // 0000 0001 0000 0000 // PORTB18 Pin set GPIO Function
 	//PORTB->PCR[19] |= (1 << 8); // 0000 0001 0000 0000 // PORTB19 Pin set GPIO Function
-	PORTD->PCR[1] |= (1<<8); // 0000 0001 0000 0000 // PORTD1 Pin set GPIO Function
+	PORTD->PCR[1] |= PORT_PCR_MUX(1); // 0000 0001 0000 0000 // PORTD1 Pin set GPIO Function + Pull up
 	
 	//PTB->PDDR |= (1 << 18); //Configure PTB18 pin as output
 	//PTB->PDDR |= (1 << 19); //Configure PTB19 pin as output
